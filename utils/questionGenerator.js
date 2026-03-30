@@ -8,11 +8,13 @@ const llm = new ChatGroq({
     model: process.env.LLM_MODEL,
 });
 
-export async function generateQuestion(role, prevAns) {
+export async function generateQuestion(role, prevAns = []) {
+    const safeRole = typeof role === "string" && role.trim() ? role.trim() : "the role";
+    const safeAnswers = Array.isArray(prevAns) ? prevAns : [];
     const prompt = `
     You are a technical interviewer.
-    Role: ${role}
-    Answers: ${prevAns.join("\n")}
+    Role: ${safeRole}
+    Answers: ${safeAnswers.join("\n")}
     Ask next best question.
     - Strong -> deeper
     - Weak -> simpler

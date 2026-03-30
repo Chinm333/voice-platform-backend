@@ -9,16 +9,19 @@ const llm = new ChatGroq({
 });
 
 export async function evaluateCandidate({ name, role, answers }) {
+    const safeName = typeof name === "string" && name.trim() ? name.trim() : "Candidate";
+    const safeRole = typeof role === "string" && role.trim() ? role.trim() : "the role";
+    const safeAnswers = Array.isArray(answers) ? answers : [];
     const prompt = `You are a senior technical interviewer evaluating a candidate.
-    Role: ${role}
-    Candidate: ${name}
+    Role: ${safeRole}
+    Candidate: ${safeName}
     Evaluate based on:
     1.Technical knowledge(0-4)
     2.Communication(0-3)
     3.Problem solving(0-3)
 
     Candidate answers:
-    ${answers.map((answer, index) => `Question ${index + 1}: ${answer}`).join("\n")}
+    ${safeAnswers.map((answer, index) => `Question ${index + 1}: ${answer}`).join("\n")}
     
     Return STRICT JSON:
     {
