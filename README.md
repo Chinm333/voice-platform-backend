@@ -11,3 +11,5 @@ It exposes APIs for generating adaptive interview questions and evaluating candi
 It also integrates with the voice agent platform through webhooks, enabling real-time interaction during calls, and supports outbound call triggering via API. 
 Candidate data and evaluation results are temporarily stored in a JSON file for rapid prototyping, with the architecture designed to be easily extendable to a 
 production database.
+
+### Live: [Voice Hiring Platform](https://voice-platform-frontend-w79i.onrender.com)
