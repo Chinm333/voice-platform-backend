@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1774813024263,
+    "name": "Rahul",
+    "role": "Backend Developer",
+    "answers": [
+      "I have 2 years experience in Node.js",
+      "REST API is communication between client and server",
+      "My strength is backend development"
+    ],
+    "score": 5,
+    "summary": "Rahul has some experience in Node.js and basic knowledge of REST API, but the interview revealed a lack of depth in technical knowledge and problem solving skills.",
+    "strengths": [
+      "2 years experience in Node.js",
+      "Basic knowledge of REST API",
+      "Confidence in backend development"
+    ],
+    "weaknesses": [
+      "Lack of detail in technical answers",
+      "No demonstration of problem solving skills",
+      "Limited communication of technical concepts"
+    ],
+    "decision": "More evaluation needed"
+  }
+]
